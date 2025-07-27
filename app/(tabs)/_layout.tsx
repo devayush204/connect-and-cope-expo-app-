@@ -1,6 +1,6 @@
 import Colors from "@/constants/Colors";
 import { Tabs } from "expo-router";
-import { Home, Users, Settings } from "lucide-react-native";
+import { Home, Users, Settings, CreditCard } from "lucide-react-native";
 import React from "react";
 
 export default function TabLayout() {
@@ -42,6 +42,13 @@ export default function TabLayout() {
         options={{
           title: "Settings",
           tabBarIcon: ({ color }) => <Settings color={color} size={24} />,
+        }}
+      />
+      <Tabs.Screen
+        name="pricing"
+        options={{
+          title: "Pricing",
+          tabBarIcon: ({ color }) => <CreditCard color={color} size={24} />,
         }}
       />
     </Tabs>
